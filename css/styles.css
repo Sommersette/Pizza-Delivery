@@ -1,0 +1,51 @@
+#companybanner {
+  text-align: center;
+  font-family: ogrejuice, monospace;
+  font-size: 60px;
+}
+
+@font-face {
+    font-family: SFGothican;
+    src: url(../fonts/TrueType/SFGothican.ttf);
+}
+@font-face {
+    font-family: ogrejuice;
+    src: url(../fonts/ogrejuice.ttf);
+}
+
+.jumbotron {
+  text-align: center;
+  display: inline-block;
+}
+
+#orderscreen {
+  display: hide;
+}
+
+#size {
+  height: 50%;
+}
+
+#toppings {
+  height: 50%;
+}
+
+#address {
+  text-align: center;
+}
+
+#subtotaladdress {
+  height: 20%;
+}
+
+#pizzadescription {
+  height: 60%;
+}
+
+#subtotal {
+  height: 20%;
+}
+
+#conformation {
+  display: hide;
+}
