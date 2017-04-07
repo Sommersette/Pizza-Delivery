@@ -7,13 +7,18 @@
     src: url(../fonts/ogrejuice.ttf);
 }
 
-#orderscreen {
-  display: hide;
+/*#orderscreen {
+  display: none;
 }
 
 #confirmation {
-  display: hide;
+  display: none;
 }
+
+#address {
+  display: none;
+  text-align: center;
+}*/
 
 header {
   text-align: center;
@@ -28,6 +33,7 @@ body {
 .jumbotron {
   text-align: center;
   display: inline-block;
+  opacity: 0.5;
 }
 
 
@@ -37,10 +43,6 @@ body {
 
 #toppings {
   height: 50vh;
-}
-
-#address {
-  text-align: center;
 }
 
 #subtotaladdress {

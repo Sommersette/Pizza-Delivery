@@ -43,6 +43,7 @@ $(document).ready(function() {
 
 
   $("#dining").submit(function(event) {
+    event.preventDefault();
     var getPizza = ("input:radio[name=dining]:checked").val();
     if (dining === "delivery") {
       $("#address").show();
@@ -53,5 +54,12 @@ $(document).ready(function() {
     }
   });
 
+  $("#address").submit(function(event){
+    event.preventDefault();
+    var addressForm = $("#address")
+    $("#address").hide();
+    $("#orderscreen").show();
   });
-});
+
+
+  });
