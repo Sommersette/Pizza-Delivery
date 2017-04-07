@@ -4,7 +4,6 @@
 
 // BACKEND //
 
-//foreach branch id dining take away or delivery options
 
 function Order(address, pizza) {
   this.address[];
@@ -36,9 +35,12 @@ Pizza.prototype.pizzaOrder = function() {
   return this.size + ", " + this.toppings;
 }
 // FRONT END //
+//for each branch id dining take away or delivery options
+
+//objext manipulation
 
 $(document).ready(function() {
-  $("").click(function() {
+  $("#subtotaladdress").click(function() {
 
   });
 });

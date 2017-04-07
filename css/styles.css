@@ -7,6 +7,14 @@
     src: url(../fonts/ogrejuice.ttf);
 }
 
+#orderscreen {
+  display: hide;
+}
+
+#confirmation {
+  display: hide;
+}
+
 header {
   text-align: center;
   font-family: ogrejuice, monospace;
@@ -22,9 +30,6 @@ body {
   display: inline-block;
 }
 
-#orderscreen {
-  display: hide;
-}
 
 #size {
   height: 50vh;
@@ -48,8 +53,4 @@ body {
 
 #subtotal {
   height: 20vh;
-}
-
-#confirmation {
-  display: hide;
 }
