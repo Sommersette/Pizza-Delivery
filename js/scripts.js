@@ -40,7 +40,18 @@ Pizza.prototype.pizzaOrder = function() {
 //objext manipulation
 
 $(document).ready(function() {
-  $("#subtotaladdress").click(function() {
+
+
+  $("#dining").submit(function(event) {
+    var getPizza = ("input:radio[name=dining]:checked").val();
+    if (dining === "delivery") {
+      $("#address").show();
+      $("#dining").hide();
+    } else {
+      $("#orderscreen").show();
+      $("#dining").hide();
+    }
+  });
 
   });
 });
