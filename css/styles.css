@@ -7,18 +7,34 @@
     src: url(../fonts/ogrejuice.ttf);
 }
 
-/*#orderscreen {
-  display: none;
+.jumbotron {
+  text-align: center;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+#delivery {
+  background-image: url(../img/delivery.jpg);
+  background-repeat: no-repeat;
+}
+
+#takeaway {
+  background-image: url(../img/takeaway.jpg);
+  background-repeat: no-repeat;
+}
+
+#orderscreen {
+  /*display: none;*/
 }
 
 #confirmation {
-  display: none;
+  /*display: none;*/
 }
 
 #address {
-  display: none;
+  /*display: none;*/
   text-align: center;
-}*/
+}
 
 header {
   text-align: center;
@@ -30,11 +46,6 @@ body {
   font-family: SFGothican;
 }
 
-.jumbotron {
-  text-align: center;
-  display: inline-block;
-  opacity: 0.5;
-}
 
 
 #size {
