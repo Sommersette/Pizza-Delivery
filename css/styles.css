@@ -1,9 +1,3 @@
-#companybanner {
-  text-align: center;
-  font-family: ogrejuice, monospace;
-  font-size: 60px;
-}
-
 @font-face {
     font-family: SFGothican;
     src: url(../fonts/TrueType/SFGothican.ttf);
@@ -11,6 +5,16 @@
 @font-face {
     font-family: ogrejuice;
     src: url(../fonts/ogrejuice.ttf);
+}
+
+header {
+  text-align: center;
+  font-family: ogrejuice, monospace;
+  font-size: 65px;
+}
+
+body {
+  font-family: SFGothican;
 }
 
 .jumbotron {
@@ -23,11 +27,11 @@
 }
 
 #size {
-  height: 50%;
+  height: 50vh;
 }
 
 #toppings {
-  height: 50%;
+  height: 50vh;
 }
 
 #address {
@@ -35,17 +39,17 @@
 }
 
 #subtotaladdress {
-  height: 20%;
+  height: 20vh;
 }
 
 #pizzadescription {
-  height: 60%;
+  height: 60vh;
 }
 
 #subtotal {
-  height: 20%;
+  height: 20vh;
 }
 
-#conformation {
+#confirmation {
   display: hide;
 }

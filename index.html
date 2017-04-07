@@ -9,10 +9,10 @@
     <script src="js/jquery-3.2.0.js" charset="utf-8"></script>
     <script src="js/scripts.js" charset="utf-8"></script>
   </head>
+  <header>
+    <h1>Turkish's Gothic  Pizza</h1>
+  </header>
   <body>
-    <header>
-      <h1>Turkish's Gothic  Pizza</h1>
-    </header>
     <div class="container">
       <!-- first branch - delivery or  take away -->
       <div id="dining" class="form-group  col-sm-12 jumbotron">
@@ -56,18 +56,16 @@
     <div id="orderscreen" class="col-sm-12">
       <!-- left column size  and toppings -->
       <div class="col-sm-3">
-        <!-- size -->
-        <div id="size" class="form-group">
-          <form action="index.html" method="post">
+        <form class="" action="index.html" method="post">
+          <!-- size -->
+          <div id="size" class="form-group">
             <legend>size</legend>
             <input type="radio" name="" value="">small
             <input type="radio" name="" value="">Medium
-            <input type="radio" name="" value="">LARGE
-          </form>
-        </div>
-        <!-- toppings -->
-        <div id="toppings" class="form-group">
-          <form class="" action="index.html" method="post">
+            <input type="radio" name="" value="">LARGE <br>
+          </div>
+          <!-- toppings -->
+          <div id="toppings" class="form-group">
             <legend>Toppings</legend>
             <input type="radio" name="cheese" value="Cheese"> Cheese
             <input type="radio" name="artichoke" value="Artichoke"> Artichoke
@@ -75,8 +73,9 @@
             <br>
             <input type="radio" name="pepperoni" value="Pepperoni"> Pepperoni
             <input type="radio" name="anchovy" value="Anchovy"> Anchovy
-          </form>
-        </div>
+          </div>
+          <button type="submit" name="button">Add</button>
+        </form>
       </div>
       <!-- visual css stylings pizza builder -->
       <div class="col-sm-7">
@@ -106,8 +105,8 @@
         <button class="btn btn-danger" type="submit" name="button">place order</button>
       </div>
     </div>
-    <!-- Order conformation -->
-    <div id="conformation" class="col-sm-12">
+    <!-- Order confirmation -->
+    <div id="confirmation" class="col-sm-12">
       <div class="col-sm-6">
         <div id="totalprice">
           <h1>TOTAL:</h1>
