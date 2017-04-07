@@ -6,8 +6,8 @@
 
 
 function Order(address, pizza) {
-  this.address[];
-  this.pizza[];
+  this.address = [];
+  this.pizza = [];
 }
 
 function Address(name, street, state, zip) {
@@ -20,7 +20,6 @@ function Address(name, street, state, zip) {
 function Pizza(size, toppings) {
   this.size = size;
   this.toppings = toppings;
-
 }
 
 Order.prototype.finalOrder = function(){
@@ -34,18 +33,18 @@ Address.prototype.fullAddress = function() {
 Pizza.prototype.pizzaOrder = function() {
   return this.size + ", " + this.toppings;
 }
+
+
 // FRONT END //
 //for each branch id dining take away or delivery options
 
 //objext manipulation
 
 $(document).ready(function() {
-
-
   $("#dining").submit(function(event) {
     event.preventDefault();
-    var getPizza = ("input:radio[name=dining]:checked").val();
-    if (dining === "delivery") {
+    var getPizza = $("input:radio[name=getPizza]:checked").val();
+    if (getPizza === "delivery") {
       $("#address").show();
       $("#dining").hide();
     } else {
