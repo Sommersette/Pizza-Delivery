@@ -10,32 +10,36 @@
     <script src="js/scripts.js" charset="utf-8"></script>
   </head>
   <header>
-    <h1>Turkish's Gothic  Pizza</h1>
+    Turkish's Gothic Fired Pizza
   </header>
   <body>
     <div class="container">
       <!-- first branch - delivery or  take away -->
       <div id="dining" class="form-group  col-sm-12 jumbotron">
+        <!-- take away -->
         <div class="col-sm-6">
           <div id="takeaway">
             <h1>Take Away</h1>
             <label for="">
               <input type="radio" name="dining" value="takeaway">
-              <img src="" alt="door open person walking out">
+              <img src="img/takeaway-small.jpg" alt="door for restaurant">
             </label>
           </div>
-        </div> <!-- takeaway -->
+        </div>
         <div class="col-sm-6"> <!-- delivery -->
           <div id="delivery">
             <h1>Delivery</h1>
             <label for=""> 30 minutes or less or your pizza will be stone cold <br>
               <input type="radio" name="dining" value="delivery">
-              <img src="" alt="vehicle delivering pizza">
+              <img src="img/delivery.jpg" alt="delivery car">
             </label>
           </div>
         </div>
-        <button class="btn btn-lg btn-success" type="submit" name="button">Submit</button>
+        <div class="">
+          <!-- <button class="col-sm-12 btn btn-lg btn-success" type="submit" name="button">Submit</button> -->
+        </div>
       </div>
+
         <br>
 
       <!-- 2nd branch (if) take away address -->
@@ -48,7 +52,8 @@
             <input required placeholder="state" size="5" type="text" name="location" >
             <input required placeholder="zip code" min="1" size="5" type="number" name="location" value="">
             <br>
-            <button id="continuetoorder" class="btn btn-lx btn-success" type="submit" name="button">Submit</button>
+            <button id="continue-to-order" class="btn btn-lx btn-success" type="submit" name="button">Submit</button>
+
           </legend>
         </form>
       </div>
@@ -68,12 +73,12 @@
           <!-- toppings -->
           <div id="toppings" class="form-group">
             <legend>Toppings</legend>
-            <input type="radio" name="cheese" value="Cheese"> Cheese
-            <input type="radio" name="artichoke" value="Artichoke"> Artichoke
+            <input type="checkbox" name="cheese" value="Cheese"> Cheese
+            <input type="checkbox" name="artichoke" value="Artichoke"> Artichoke
             <br>
             <br>
-            <input type="radio" name="pepperoni" value="Pepperoni"> Pepperoni
-            <input type="radio" name="anchovy" value="Anchovy"> Anchovy
+            <input type="checkbox" name="pepperoni" value="Pepperoni"> Pepperoni
+            <input type="checkbox" name="anchovy" value="Anchovy"> Anchovy
           </div>
           <button type="submit" name="button">Add</button>
         </form>
@@ -81,13 +86,14 @@
       <!-- visual css stylings pizza builder -->
       <div class="col-sm-7">
         <div id="yourpizza"></div>
+        <img src="img/pizzapan.jpg" alt="pizza tray place holder"> <!--600px x 600px -->
       </div>
       <!-- Summary column for order -->
       <div class="col-sm-2">
         <div class="col-sm-12">
           <div id="subtotaladdress">
             <h4>Delivery Address: </h4> <br>
-            <p></p> <!-- fill in with js -->
+            <p></p> <!-- fill in with js/JQuery -->
           </div>
         </div>
         <div class="col-sm-12">

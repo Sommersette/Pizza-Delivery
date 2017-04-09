@@ -43,12 +43,13 @@ Pizza.prototype.pizzaOrder = function() {
 $(document).ready(function() {
   $("#dining").submit(function(event) {
     event.preventDefault();
-    var dining = $("input:radio[name=dining]:checked").val();
+    var inOrOut = $("input:radio[name=dining]:checked").val();
     if (dining === "delivery") {
       $("#dining").hide();
       $("#address").show();
     } else {
       $("#dining").hide();
+      $("#address").hide();
       $("#orderscreen").show();
     }
   });

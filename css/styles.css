@@ -7,63 +7,56 @@
     src: url(../fonts/ogrejuice.ttf);
 }
 
-.jumbotron {
-  text-align: center;
-  display: inline-block;
-  opacity: 0.5;
-}
-
-#delivery {
-  background-image: url(../img/delivery.jpg);
-  background-repeat: no-repeat;
-}
-
-#takeaway {
-  background-image: url(../img/takeaway.jpg);
-  background-repeat: no-repeat;
-}
-
-#orderscreen {
-  /*display: none;*/
-}
-
-#confirmation {
-  /*display: none;*/
-}
-
-#address {
-  /*display: none;*/
-  text-align: center;
+#logo {
+  width: 65px;
 }
 
 header {
+  height: 80px;
   text-align: center;
+  vertical-align: bottom;
   font-family: ogrejuice, monospace;
-  font-size: 65px;
+  font-size: 60px;
 }
 
 body {
   font-family: SFGothican;
 }
 
+.jumbotron {
+  text-align: center;
+  display: inline-block;
+  opacity: 0.5;
+}
 
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  border:2px solid #f00;
+}
 
-#size {
+legend {
+  font-size: 24px;
+}
+
+/*#orderscreen, #confirmation, #address {
+  display: none;
+}*/
+
+#size, #toppings {
   height: 50vh;
 }
 
-#toppings {
-  height: 50vh;
-}
-
-#subtotaladdress {
+#subtotaladdress, #subtotal {
   height: 20vh;
 }
 
 #pizzadescription {
   height: 60vh;
-}
-
-#subtotal {
-  height: 20vh;
 }
