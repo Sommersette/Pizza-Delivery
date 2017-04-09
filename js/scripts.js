@@ -44,7 +44,7 @@ $(document).ready(function() {
   event.preventDefault();
 
     var inOrOut = $("input:radio[name=dining]:checked").val();
-    if (dining === "delivery") {
+    if (inOrOut === "#delivery") {
       $("#address").show();
       $("#dining").hide();
     } else {
@@ -61,7 +61,7 @@ $(document).ready(function() {
   });
 
 
-    $("#size").click(function(event){
+    $("#size").submit(function(event){
     event.preventDefault();
     var pizzaSize =  $("input:radio[name=size]:checked").val();
     if (size === small) {

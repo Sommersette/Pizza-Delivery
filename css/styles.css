@@ -44,7 +44,7 @@ legend {
   text-align:  center;
 }
 
-#orderscreen, #confirmation, #address {
+#orderscreen, #confirmation, #address, .pizza-size {
   display: none;
 }
 
@@ -52,7 +52,11 @@ legend {
   height: 50vh;
 }
 
-.pizza-size {
+input[type="radio"]{
+  margin: 5px 10px 0 10px;
+}
+
+.pizza-size, #sizes {
   height: 250px;
 }
 

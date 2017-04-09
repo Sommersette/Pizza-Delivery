@@ -18,23 +18,23 @@
         </div>
       </header>
       <!-- first branch - delivery or  take away -->
-      <div id="dining" class="form-group col-sm-12 jumbotron">
+      <form  id="dining" class="form-group col-sm-12 jumbotron">
         <!-- take away -->
         <div class="col-sm-6">
-          <div id="takeaway">
+          <div>
             <h1>Take Away</h1>
-            <label for="radio-inline">
-              <input type="radio" name="dining" value="takeaway">
+            <label for="takeaway">
+              <input id="takeaway" type="radio" name="dining" value="takeaway">
               <img src="img/takeaway-small.jpg" alt="door for restaurant">
             </label>
           </div>
         </div>
         <!-- delivery -->
         <div class="col-sm-6">
-          <div id="delivery">
+          <div >
             <h1>Delivery</h1>
-            <label for="radio-inline"> 30 minutes or less or your pizza will be stone cold <br>
-              <input type="radio" name="dining" value="delivery">
+            <label for="delivery"> 30 minutes or less or your pizza will be stone cold <br>
+              <input id="delivery" type="radio" name="dining" value="delivery">
               <img src="img/delivery.jpg" alt="delivery car">
             </label>
           </div>
@@ -42,7 +42,7 @@
         <!-- <div>
           <button class="col-sm-12 btn btn-lg btn-success" type="submit" name="button">Submit</button>
         </div> -->
-      </div>
+      </form >
 
         <br>
 
@@ -73,15 +73,17 @@
             <input type="radio" name="size" value="small">small
             <input type="radio" name="size" value="medium">Medium
             <input type="radio" name="size" value="large">LARGE <br>
-            <!-- <img class="pizza-size" src="img/small-pizza.png" alt="small pizza 10 inch pizza">
-            <img class="pizza-size" src="img/medium-pizza.png" alt="medium 14 inch pizza"> -->
-            <img class="pizza-size" src="img/large-pizza.png" alt="large 16 inch pizza">
+            <img id="sizes" src="img/pizza-size.jpg" alt="line drawing of pizza">
+            <img class="pizza-size" src="img/small-size.jpg" alt="small pizza 10 inch pizza">
+            <img class="pizza-size" src="img/medium-size.jpg" alt="medium 14 inch pizza">
+            <img class="pizza-size" src="img/large-size.jpg" alt="large 16 inch pizza">
           </div>
           <!-- toppings -->
           <div id="toppings" class="form-group">
             <legend>Toppings</legend>
             <input type="checkbox" name="cheese" value="Cheese"> Cheese
             <input type="checkbox" name="artichoke" value="Artichoke"> Artichoke
+            <input type="checkbox" name="mushroom" value="mushroom"> Artichoke
             <br>
             <br>
             <input type="checkbox" name="pepperoni" value="Pepperoni"> Pepperoni
