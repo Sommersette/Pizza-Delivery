@@ -7,19 +7,25 @@
     src: url(../fonts/ogrejuice.ttf);
 }
 
-#logo {
-  width: 65px;
-}
 
 header {
   height: 80px;
   text-align: center;
   vertical-align: bottom;
   font-family: ogrejuice, monospace;
-  font-size: 60px;
+  font-size: 7vh;
 }
 
-body {
+/*#CompanyLogo {
+
+}*/
+
+#login {
+  font-family: SFGothican;
+  font-size: 20px;
+}
+
+body, #login{
   font-family: SFGothican;
 }
 
@@ -27,30 +33,27 @@ body {
   text-align: center;
   display: inline-block;
   opacity: 0.5;
-}
-
-label > input{ /* HIDE RADIO */
-  visibility: hidden; /* Makes input not-clickable */
-  position: absolute; /* Remove input from document flow */
-}
-label > input + img{ /* IMAGE STYLES */
-  cursor:pointer;
-  border:2px solid transparent;
-}
-label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
-  border:2px solid #f00;
+  align-items: center;
 }
 
 legend {
   font-size: 24px;
 }
 
-/*#orderscreen, #confirmation, #address {
+#address {
+  text-align:  center;
+}
+
+#orderscreen, #confirmation, #address {
   display: none;
-}*/
+}
 
 #size, #toppings {
   height: 50vh;
+}
+
+.pizza-size {
+  height: 250px;
 }
 
 #subtotaladdress, #subtotal {

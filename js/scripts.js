@@ -34,22 +34,21 @@ Pizza.prototype.pizzaOrder = function() {
   return this.size + ", " + this.toppings;
 }
 
-
 // FRONT END //
 //for each branch id dining take away or delivery options
 
 //objext manipulation
 
 $(document).ready(function() {
-  $("#dining").submit(function(event) {
-    event.preventDefault();
+  $("#dining").click(function(event) {
+  event.preventDefault();
+
     var inOrOut = $("input:radio[name=dining]:checked").val();
     if (dining === "delivery") {
-      $("#dining").hide();
       $("#address").show();
-    } else {
       $("#dining").hide();
-      $("#address").hide();
+    } else {
+      $("#address, #dining").hide();
       $("#orderscreen").show();
     }
   });
@@ -60,6 +59,25 @@ $(document).ready(function() {
     $("#address").hide();
     $("#orderscreen").show();
   });
+
+
+    $("#size").click(function(event){
+    event.preventDefault();
+    var pizzaSize =  $("input:radio[name=size]:checked").val();
+    if (size === small) {
+      $().show();
+      $().hide();
+      $().hide();
+    } else if (size === medium) {
+      $().show();
+      $().hide();
+      $().hide();
+    } else {
+      $().show();
+      $().hide();
+      $().hide();
+    }
+});
 
 
   });
