@@ -74,28 +74,33 @@
             <input type="radio" name="size" value="medium">Medium
             <input type="radio" name="size" value="large">LARGE <br>
             <img id="sizes" src="img/pizza-size.jpg" alt="line drawing of pizza">
-            <img class="pizza-size" src="img/small-size.jpg" alt="small pizza 10 inch pizza">
-            <img class="pizza-size" src="img/medium-size.jpg" alt="medium 14 inch pizza">
-            <img class="pizza-size" src="img/large-size.jpg" alt="large 16 inch pizza">
+            <img id="small" class="pizza-size" src="img/small-size.jpg" alt="small pizza 10 inch pizza">
+            <img id="medium" class="pizza-size" src="img/medium-size.jpg" alt="medium 14 inch pizza">
+            <img id="large" class="pizza-size" src="img/large-size.jpg" alt="large 16 inch pizza">
           </div>
           <!-- toppings -->
           <div id="toppings" class="form-group">
             <legend>Toppings</legend>
-            <input type="checkbox" name="cheese" value="Cheese"> Cheese
-            <input type="checkbox" name="artichoke" value="Artichoke"> Artichoke
-            <input type="checkbox" name="mushroom" value="mushroom"> Artichoke
+            <input type="checkbox" name="toppings" value="Cheese"> Cheese
+            <input type="checkbox" name="toppings" value="Artichoke"> Artichokes
+            <input type="checkbox" name="toppings" value="Mushroom"> Mushrooms
             <br>
             <br>
-            <input type="checkbox" name="pepperoni" value="Pepperoni"> Pepperoni
-            <input type="checkbox" name="anchovy" value="Anchovy"> Anchovy
+            <input type="checkbox" name="toppings" value="Pepperoni"> Pepperoni
+            <input type="checkbox" name="toppings" value="Anchovy"> Anchovies
           </div>
-          <button type="submit" name="button">Add</button>
+          <button class="btn btn-info btn-block btn-lg" type="submit" name="button">Add</button>
         </form>
       </div>
       <!-- visual css stylings pizza builder -->
       <div class="col-sm-7">
-        <div id="yourpizza"></div>
-        <img src="img/pizzapan.jpg" alt="pizza tray place holder"> <!--600px x 600px -->
+        <img id="yourpizza" src="img/pizzapan.png" alt="pizza tray place holder">
+        <img id="crust" src="img/crust.png" alt="crust">
+        <img id="pepperoni" src="img/pepperoni.png" alt="pepperoni">
+        <img id="anchovies" src="img/anchovie.png" alt="anchovies">
+        <img id="artichokes" src="img/artichokes.png" alt="artichokes">
+        <img id="mushrooms" src="img/mushrooms.png" alt="mushrooms">
+        <img id="cheese" src="img/cheese.png" alt="cheese">
       </div>
       <!-- Summary column for order -->
       <div class="col-sm-2">
@@ -118,7 +123,7 @@
           </div>
         </div>
         <br>
-        <button class="btn btn-danger" type="submit" name="button">place order</button>
+        <button class="btn btn-lg btn-danger btn-block" type="submit" name="button">place order</button>
       </div>
     </div>
     <!-- Order confirmation -->

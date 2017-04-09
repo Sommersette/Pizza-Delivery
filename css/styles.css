@@ -16,10 +16,6 @@ header {
   font-size: 7vh;
 }
 
-/*#CompanyLogo {
-
-}*/
-
 #login {
   font-family: SFGothican;
   font-size: 20px;
@@ -44,20 +40,60 @@ legend {
   text-align:  center;
 }
 
-#orderscreen, #confirmation, #address, .pizza-size {
+#orderscreen, #confirmation, #address, .pizza-size, #crust, #pepperoni, #anchovies, #artichokes, #mushrooms, #cheese {
   display: none;
 }
 
-#size, #toppings {
-  height: 50vh;
+#size {
+  height: 65vh;
+}
+#toppings {
+  height: 35vh;
 }
 
 input[type="radio"]{
-  margin: 5px 10px 0 10px;
+  margin: 5px 10px 20px 10px;
 }
 
 .pizza-size, #sizes {
   height: 250px;
+  margin-top: 10px;
+}
+
+#yourpizza {
+  position: absolute;
+  z-index: auto;
+}
+
+#crust {
+  position: absolute;
+  z-index: 1;
+}
+
+#pepperoni {
+  position: absolute;
+  z-index: 2;
+}
+
+#anchovies {
+  position: absolute;
+  z-index: 3;
+}
+
+#artichokes {
+  position: absolute;
+  z-index: 4;
+}
+
+#mushrooms {
+  position: absolute;
+  z-index: 5;
+}
+
+#cheese {
+  position: absolute;
+  top: -29px;
+  z-index: 6;
 }
 
 #subtotaladdress, #subtotal {

@@ -40,9 +40,9 @@ Pizza.prototype.pizzaOrder = function() {
 //objext manipulation
 
 $(document).ready(function() {
+
   $("#dining").click(function(event) {
   event.preventDefault();
-
     var inOrOut = $("input:radio[name=dining]:checked").val();
     if (inOrOut === "#delivery") {
       $("#address").show();
@@ -61,23 +61,36 @@ $(document).ready(function() {
   });
 
 
-    $("#size").submit(function(event){
-    event.preventDefault();
-    var pizzaSize =  $("input:radio[name=size]:checked").val();
-    if (size === small) {
-      $().show();
-      $().hide();
-      $().hide();
-    } else if (size === medium) {
-      $().show();
-      $().hide();
-      $().hide();
-    } else {
-      $().show();
-      $().hide();
-      $().hide();
-    }
+  $("#size").change(function(event){
+  event.preventDefault();
+  var pizzaSize =  $("input:radio[name=size]:change").val();
+  if (size === large) {
+    $("#small").hide();
+    $("#medium").hide();
+    $("#large").show();
+    $("#sizes").hide();
+  } else if (size === medium) {
+    $("#small").hide();
+    $("#medium").show();
+    $("#large").hide();
+    $("#sizes").hide();
+  } else {
+    $("#small").show();
+    $("#medium").hide();
+    $("#large").hide();
+    $("#sizes").hide();
+  }
 });
 
+  $("#toppings").change(function(event){
+    event.preventDefault();
+    var delicious = $("input:checkbox[name=toppings]:checked").val(':checked');
+    $("Cheese").toggle("#cheese");
+    $("Artichoke").toggle("#artichokes");
+    $("Mushroom").toggle("#mushooms");
+    $("Pepperoni").toggle("#pepperoni");
+    $("Anchovy").toggle("#anchovies");
 
   });
+
+});
