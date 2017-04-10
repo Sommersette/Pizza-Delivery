@@ -37,13 +37,8 @@
             </label>
           </div>
         </div>
-        <!-- <div>
-          <button class="col-sm-12 btn btn-lg btn-success" type="submit" name="button">Submit</button>
-        </div> -->
       </form >
-
         <br>
-
       <!-- 2nd branch (if) take away address -->
       <div id="address">
         <form class="" action="index.html" method="post">
@@ -54,90 +49,113 @@
             <input required placeholder="state" size="5" type="text" name="location" >
             <input required placeholder="zip code" min="1" size="5" type="number" name="location" value="">
             <br>
-            <button id="continue-to-order" class="btn btn-lx btn-success" type="submit" name="button">Submit</button>
+            <button id="continue-to-order" class="btn btn-lx btn-success" type="submit" name="button"><i class="fa fa-car" aria-hidden="true"></i> Submit</button>
           </legend>
         </form>
       </div>
 
       <!-- else of branch and ACTUAL Pizza order  -->
-    <div id="orderscreen" class="col-sm-12">
-      <!-- left column size  and toppings -->
+      <div id="orderscreen" class="col-sm-12">
+        <!-- left column size  and toppings -->
+        <div class="col-sm-3">
+          <form class="" action="index.html" method="post">
+            <!-- size -->
+            <div id="size" class="form-group">
+              <legend class="radio-inline">size</legend>
+              <label for="radio-inline  ">
+              <input type="radio" name="size" value="small">small
+              <input type="radio" name="size" value="medium">Medium
+              <input type="radio" name="size" value="large">LARGE <br>
+              <img id="sizes" src="img/pizza-size.jpg" alt="line drawing of pizza">
+              <img id="small" class="pizza-size" src="img/small-size.jpg" alt="small pizza 10 inch pizza">
+              <img id="medium" class="pizza-size" src="img/medium-size.jpg" alt="medium 14 inch pizza">
+              <img id="large" class="pizza-size" src="img/large-size.jpg" alt="large 16 inch pizza">
+            </div>
+            <!-- toppings -->
+            <div id="toppings" class="form-group">
+              <legend>Toppings</legend>
+              <label for="cheese">
+                <input class="toppings" type="checkbox" name="toppings" value="cheese"> Cheese
+              </label><br>
+              <label for="artichoke">
+                <input class="toppings" type="checkbox" name="toppings" value="artichoke"> Artichokes
+              </label><br>
+              <label for="mushroom">
+                <input class="toppings" type="checkbox" name="toppings" value="mushroom"> Mushrooms
+              </label><br>
+              <label for="pepperoni">
+                <input class="toppings" type="checkbox" name="toppings" value="pepperoni"> Pepperoni
+              </label><br>
+              <label for="anchovy">
+                <input class="toppings" type="checkbox" name="toppings" value="anchovy"> Anchovies
+              </label>  <br>
+            </div>
+            <button class="btn btn-info btn-block btn-lg" type="submit" name="button"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+          </form>
+        </div>
+        <!-- visual css stylings pizza builder -->
+        <div class="col-sm-7">
+          <img id="yourpizza" src="img/pizzapan.png" alt="pizza tray place holder">
+          <img id="crust" src="img/crust.png" alt="crust">
+          <img id="pepperoni" src="img/pepperoni.png" alt="pepperoni">
+          <img id="anchovy" src="img/anchovie.png" alt="anchovies">
+          <img id="artichokes" src="img/artichokes.png" alt="artichokes">
+          <img id="mushrooms" src="img/mushrooms.png" alt="mushrooms">
+          <img id="cheese" src="img/cheese.png" alt="cheese">
+        </div>
+        <!-- Summary column for order -->
+        <div class="col-sm-2">
+          <div class="col-sm-12">
+            <div id="subtotaladdress">
+              <h4>Delivery Address: </h4> <br>
+              <p></p> <!-- fill in with js/JQuery -->
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div id="pizzadescription">
+              <h4>Order Description: </h4> <br>
+              <ul>
+                <li></li>
+              </ul> <!-- fill in with js -->
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div id="subtotal">
+              <h4>Subtotal:</h4> <br>
+              <p></p> <!-- fill in with js -->
+            </div>
+          </div>
+          <br>
+          <button class="btn btn-lg btn-danger btn-block" type="submit" name="button"> Place Order <i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <!-- Order confirmation -->
+      <div id="confirmation" class="col-sm-12">
+        <div class="col-sm-6">
+          <div id="totalprice">
+            <h1>TOTAL:</h1>
+          </div>
+        </div>
+        <div class=col-sm-6"">
+          <h1>Yummers!</h1> <br>
+          <span></span> <!-- pizza  on it's way -->
+        </div>
+      </div>
+    </div>
+    <!-- <footer>
       <div class="col-sm-3">
-        <form class="" action="index.html" method="post">
-          <!-- size -->
-          <div id="size" class="form-group">
-            <legend class="radio-inline">size</legend>
-            <label for="radio-inline  ">
-            <input type="radio" name="size" value="small">small
-            <input type="radio" name="size" value="medium">Medium
-            <input type="radio" name="size" value="large">LARGE <br>
-            <img id="sizes" src="img/pizza-size.jpg" alt="line drawing of pizza">
-            <img id="small" class="pizza-size" src="img/small-size.jpg" alt="small pizza 10 inch pizza">
-            <img id="medium" class="pizza-size" src="img/medium-size.jpg" alt="medium 14 inch pizza">
-            <img id="large" class="pizza-size" src="img/large-size.jpg" alt="large 16 inch pizza">
-          </div>
-          <!-- toppings -->
-          <div id="toppings" class="form-group">
-            <legend>Toppings</legend>
-            <input type="checkbox" name="toppings" value="Cheese"> Cheese
-            <input type="checkbox" name="toppings" value="Artichoke"> Artichokes
-            <input type="checkbox" name="toppings" value="Mushroom"> Mushrooms
-            <br>
-            <br>
-            <input type="checkbox" name="toppings" value="Pepperoni"> Pepperoni
-            <input type="checkbox" name="toppings" value="Anchovy"> Anchovies
-          </div>
-          <button class="btn btn-info btn-block btn-lg" type="submit" name="button">Add</button>
-        </form>
       </div>
-      <!-- visual css stylings pizza builder -->
-      <div class="col-sm-7">
-        <img id="yourpizza" src="img/pizzapan.png" alt="pizza tray place holder">
-        <img id="crust" src="img/crust.png" alt="crust">
-        <img id="pepperoni" src="img/pepperoni.png" alt="pepperoni">
-        <img id="anchovies" src="img/anchovie.png" alt="anchovies">
-        <img id="artichokes" src="img/artichokes.png" alt="artichokes">
-        <img id="mushrooms" src="img/mushrooms.png" alt="mushrooms">
-        <img id="cheese" src="img/cheese.png" alt="cheese">
+      <div class="col-sm-3">
+        <p>address:</p>
+        <p>6124 W Burnside dr</p>
+        <p>Porland, OR 97219-6348</p>
       </div>
-      <!-- Summary column for order -->
-      <div class="col-sm-2">
-        <div class="col-sm-12">
-          <div id="subtotaladdress">
-            <h4>Delivery Address: </h4> <br>
-            <p></p> <!-- fill in with js/JQuery -->
-          </div>
-        </div>
-        <div class="col-sm-12">
-          <div id="pizzadescription">
-            <h4>Order Description: </h4> <br>
-            <ul>
-              <li></li>
-            </ul> <!-- fill in with js -->
-          </div>
-        </div>
-        <div class="col-sm-12">
-          <div id="subtotal">
-            <h4>Subtotal:</h4> <br>
-            <p></p> <!-- fill in with js -->
-          </div>
-        </div>
-        <br>
-        <button class="btn btn-lg btn-danger btn-block" type="submit" name="button">place order</button>
+      <div class="col-sm-3">
+        <p>phone # 503-555-6870</p>
+        <p>Email:orders@turksgothicpizza.com</p>
       </div>
-    </div>
-    <!-- Order confirmation -->
-    <div id="confirmation" class="col-sm-12">
-      <div class="col-sm-6">
-        <div id="totalprice">
-          <h1>TOTAL:</h1>
-        </div>
+      <div class="col-sm-3">
       </div>
-      <div class=col-sm-6"">
-        <h1>Yummers!</h1> <br>
-        <span></span> <!-- pizza  on it's way -->
-      </div>
-    </div>
-    </div>
+    </footer> -->
   </body>
 </html>

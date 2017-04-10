@@ -39,15 +39,17 @@ legend {
   text-align:  center;
 }
 
-#orderscreen, #confirmation, #address, .pizza-size, #crust, #pepperoni, #anchovies, #artichokes, #mushrooms, #cheese {
+#orderscreen, #confirmation, #address, .pizza-size, #crust, #pepperoni, #anchovy, #artichokes, #mushrooms, #cheese {
   display: none;
 }
 
 #size {
   height: 65vh;
+  font-size: 18px;
 }
 #toppings {
   height: 35vh;
+  font-size: 18px;
 }
 
 input[type="radio"]{
@@ -78,7 +80,7 @@ li {
   z-index: 2;
 }
 
-#anchovies {
+#anchovy {
   position: absolute;
   z-index: 3;
 }
