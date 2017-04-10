@@ -34,7 +34,6 @@ Pizza.prototype.pizzaOrder = function() {
 //objext manipulation
 
 
-
 //branching
 $(document).ready(function() {
 
@@ -68,6 +67,7 @@ $(document).ready(function() {
     $("#large").show();
     $("#sizes").hide();
     $("#crust").show();
+    $("#toppings").show();
     //price: append DOM #pizzadescription <ul><li></li></ul>
   } else if (size === "medium") {
     $("#small").hide();
@@ -75,6 +75,8 @@ $(document).ready(function() {
     $("#large").hide();
     $("#sizes").hide();
     $("#crust").show();
+    $("#toppings").show();
+
     //price: append DOM #pizzadescription <ul><li></li></ul>
   } else {
     $("#small").show();
@@ -82,11 +84,24 @@ $(document).ready(function() {
     $("#large").hide();
     $("#sizes").hide();
     $("#crust").show();
+    $("#toppings").show();
+
     //price: append DOM #pizzadescription <ul><li></li></ul>
 
   }
 });
 
+// ("input:checkbox[value=this]:checked")
+
+// var result = function(){
+//   types.forEach(function(type){
+//     $(`input:checkbox[name=${type}-toppings]:checked`).each(function(event){
+//       event.preventDefault();
+//       var toppings = $(this).val();
+//       $(`#{type}-checkbox`).toggle();
+//       });
+//     });
+//   });
 
   $("input:checkbox").change(function(event){
     event.preventDefault();
@@ -97,6 +112,17 @@ $(document).ready(function() {
     $("#artichokes").toggle();
     $("#mushrooms").toggle();
   });
+
+
+// function resetForm() {
+//   $("input#cheese").val("");
+//   $("input#pepperoni").val("");
+//   $("input#anchovy").val("");
+//   $("input#artichokes").val("");
+//   $("input#size").val("");
+//   $(input"#mushrooms").val("");
+// }
+// resetForm
 
 // toggle toppings and increase  price
 // add button clears form/subtotals price and moves item to order description column

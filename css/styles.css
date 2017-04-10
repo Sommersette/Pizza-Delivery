@@ -39,7 +39,7 @@ legend {
   text-align:  center;
 }
 
-#orderscreen, #confirmation, #address, .pizza-size, #crust, #pepperoni, #anchovy, #artichokes, #mushrooms, #cheese, #footer {
+#orderscreen, #confirmation, #address, .pizza-size, #toppings, #crust, #pepperoni, #anchovy, #artichokes, #mushrooms, #cheese, #footer {
   display: none;
 }
 
@@ -101,8 +101,19 @@ li {
   z-index: 6;
 }
 
-#subtotaladdress, #subtotal {
+#deliveryaddress, #subtotal {
   height: 20vh;
+}
+
+#bluetext {
+  color: blue;
+}
+
+#red {
+  color: red;
+  font-style: oblique;
+  font-weight: bolder;
+  font-size: 22px;
 }
 
 #pizzadescription {
