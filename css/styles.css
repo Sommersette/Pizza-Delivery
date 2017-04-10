@@ -7,7 +7,6 @@
     src: url(../fonts/ogrejuice.ttf);
 }
 
-
 header {
   height: 80px;
   text-align: center;
@@ -58,6 +57,10 @@ input[type="radio"]{
 .pizza-size, #sizes {
   height: 250px;
   margin-top: 10px;
+}
+
+li {
+  list-style-type: none;
 }
 
 #yourpizza {

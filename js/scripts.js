@@ -1,22 +1,22 @@
 // BACKEND //
 
 function Order(address, pizza, price) {
-  this.address = [];
-  this.pizza = [];
-  this.price = [];
-}
+    this.address = [];
+    this.pizza = [];
+    this.price = [];
+  }
 
 function Address(name, street, state, zip) {
-  this.name = name;
-  this.street = street;
-  this.city = state;
-  this.zip = zip;
-}
+    this.name = name;
+    this.street = street;
+    this.city = state;
+    this.zip = zip;
+  }
 
 function Pizza(size, toppings) {
-  this.size = size;
-  this.toppings = toppings;
-}
+    this.size = size;
+    this.toppings = toppings;
+  }
 
 Order.prototype.finalOrder = function(){
   return this.address + ", " + this.pizza;
@@ -61,22 +61,30 @@ $(document).ready(function() {
 
   $("#size").change(function(event){
   event.preventDefault();
-  var pizzaSize =  $("input:radio[name=size]:change").val();
-  if (size === large) {
+  var pizzaSize =  $("input:radio[name=size]:checked").val();
+  if (pizzaSize === "large") {
     $("#small").hide();
     $("#medium").hide();
     $("#large").show();
     $("#sizes").hide();
-  } else if (size === medium) {
+    $("#crust").show();
+    //price: append DOM #pizzadescription <ul><li></li></ul>
+  } else if (size === "medium") {
     $("#small").hide();
     $("#medium").show();
     $("#large").hide();
     $("#sizes").hide();
+    $("#crust").show();
+    //price: append DOM #pizzadescription <ul><li></li></ul>
+
   } else {
     $("#small").show();
     $("#medium").hide();
     $("#large").hide();
     $("#sizes").hide();
+    $("#crust").show();
+    //price: append DOM #pizzadescription <ul><li></li></ul>
+
   }
 });
 
