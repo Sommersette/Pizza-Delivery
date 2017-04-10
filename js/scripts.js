@@ -46,7 +46,7 @@ $(document).ready(function() {
       $("#dining").hide();
     } else {
       $("#address, #dining").hide();
-      $("#orderscreen").show();
+      $("#orderscreen, footer").show();
     }
   });
 
@@ -60,6 +60,7 @@ $(document).ready(function() {
 
   $("#size").change(function(event){
   event.preventDefault();
+  var Size = []
   var size =  $("input:radio[name=size]:checked").val();
   if (size === "large") {
     $("#small").hide();
@@ -87,15 +88,20 @@ $(document).ready(function() {
 });
 
 
-  // $("#toppings").change(function(event){
-  //   event.preventDefault();
-  //   var toppings = []
-  //    $("input:checkbox[name=toppings]:change").change(function() {
-  //     $("#cheese").toggle();
-  //     $("#pepperoni").toggle();
-  //     $("#anchovy").toggle();
-  //     $("#artichokes").toggle();
-  //     $("#mushrooms").toggle();
-  // });
+  $("input:checkbox").change(function(event){
+    event.preventDefault();
+    var toppings = []
+    $("#cheese").toggle();
+    $("#pepperoni").toggle();
+    $("#anchovy").toggle();
+    $("#artichokes").toggle();
+    $("#mushrooms").toggle();
+  });
+
+// toggle toppings and increase  price
+// add button clears form/subtotals price and moves item to order description column
+// address added to address box in right column
+// place order  shows grand total and order screen.
+
 
 });

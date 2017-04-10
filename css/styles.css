@@ -39,13 +39,13 @@ legend {
   text-align:  center;
 }
 
-#orderscreen, #confirmation, #address, .pizza-size, #crust, #pepperoni, #anchovy, #artichokes, #mushrooms, #cheese {
+#orderscreen, #confirmation, #address, .pizza-size, #crust, #pepperoni, #anchovy, #artichokes, #mushrooms, #cheese, #footer {
   display: none;
 }
 
 #size {
   height: 65vh;
-  font-size: 18px;
+  font-size: 16px;
 }
 #toppings {
   height: 35vh;
