@@ -1,13 +1,9 @@
-// Create a pizza object constructor with properties for toppings and size.
-// Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
-//_________________________________
-
 // BACKEND //
 
-
-function Order(address, pizza) {
+function Order(address, pizza, price) {
   this.address = [];
   this.pizza = [];
+  this.price = [];
 }
 
 function Address(name, street, state, zip) {
@@ -35,16 +31,18 @@ Pizza.prototype.pizzaOrder = function() {
 }
 
 // FRONT END //
-//for each branch id dining take away or delivery options
 
 //objext manipulation
 
+
+
+//branching
 $(document).ready(function() {
 
   $("#dining").click(function(event) {
   event.preventDefault();
     var inOrOut = $("input:radio[name=dining]:checked").val();
-    if (inOrOut === "#delivery") {
+    if (inOrOut === "delivery") {
       $("#address").show();
       $("#dining").hide();
     } else {
