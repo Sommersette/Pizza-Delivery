@@ -21,7 +21,7 @@ function grandTotal(size, toppings, delivery) {
   } else if (size === "medium"){
     var sizePrice = 12;
   } else if (size === "large") {
-    sizePrice = 15;
+    sizePrice = 14;
   } else if (toppings.length === 5) {
     toppingPrice = 6.25;
   } else if (toppings.length === 4) {
