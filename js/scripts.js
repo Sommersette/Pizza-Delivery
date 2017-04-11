@@ -46,10 +46,13 @@ $(document).ready(function() {
 
   $("#dining").click(function(event) {
   event.preventDefault();
+  var delivery = []
     var inOrOut = $("input:radio[name=dining]:checked").val();
     if (inOrOut === "delivery") {
       $("#address").show();
       $("#dining").hide();
+      var delivery = (this).val();
+      delviery.push(delivery);
     } else {
       $("#address, #dining").hide();
       $("#orderscreen, footer").show();
