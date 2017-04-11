@@ -1,15 +1,8 @@
 // BACKEND //
 
-function Order(address, pizza) {
-    this.address = [];
+function Order(pizza, delivery) {
     this.pizza = [];
-  }
-
-function Address(name, street, state, zip) {
-    this.name = name;
-    this.street = street;
-    this.city = state;
-    this.zip = zip;
+    this.delivery = [];
   }
 
 function Pizza(size, toppings) {
@@ -17,23 +10,35 @@ function Pizza(size, toppings) {
     this.toppings = toppings;
   }
 
-Order.prototype.finalOrder = function(){
-  return this.address + ", " + this.pizza;
-}
-
-Address.prototype.fullAddress = function() {
-  return this.name + ", " + this.street + ", " + this.city, + ", " + this.zip;
-}
-
 Pizza.prototype.pizzaOrder = function() {
-  return this.size + ", " + this.toppings;
+  return this.size + ", " + this.toppings + "," + this.delivery;
 }
 
-function //push to this object with conditional for each topping and do one for size as  well based on the length of each array that it is for. 
-
+//push to this object with conditional for each topping and do one for size as well based on the length of each array that it is for.
+function grandTotal(size, toppings, delivery) {
+  if (size === "small") {
+    var sizePrice = 10;
+  } else if (size === "medium"){
+    var sizePrice = 12;
+  } else if (size === "large") {
+    sizePrice = 15;
+  } else if (toppings.length === 5) {
+    toppingPrice = 6.25;
+  } else if (toppings.length === 4) {
+    toppingPrice = 5.00;
+  } else if (toppings.length === 3) {
+      toppingPrice = 3.75;
+  } else if (toppings.length === 2) {
+    toppingPrice = 2.50;
+  } else if (toppings.lenght === 1){
+    toppingsPrice = 1.25;
+  } else if (delivery === true) {
+    deliveryPrice = 2.00;
+  }
+  subtotal = (sizePrice+toppingPrice+deliveryPrice);
+  return subtotal;
+}
 // FRONT END //
-
-//objext manipulation
 
 
 //branching
@@ -93,22 +98,12 @@ $(document).ready(function() {
   }
 });
 
-  var toppings = []
-  $("input:checkbox[name=toppings]:checked")each(function(){  // loop through  each topping with each statement and accrue cost by pushing to an empty array called toppings.
-    var toppings = $(this).val();
-    toppings.push(topping);
-  });
+  // var toppings = []
+  // $("input:checkbox[name=toppings]:checked")each(function(){  // loop through  each topping with each statement and accrue cost by pushing to an empty array called toppings.
+  //   var toppings = $(this).val();
+  //   toppings.push(topping);
+  // });
 
-
-// var result = function(){
-//   types.forEach(function(type){
-//     $(`input:checkbox[name=${type}-toppings]:checked`).each(function(event){
-//       event.preventDefault();
-//       var toppings = $(this).val();
-//       $(`#{type}-checkbox`).toggle();
-//       });
-//     });
-//   });
 
 $("#cheeseCheck").change(function(){
   $("#cheese").toggle();
