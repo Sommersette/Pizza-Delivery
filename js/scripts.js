@@ -1,18 +1,30 @@
 // BACKEND //
 
-function Order(pizza, delivery) {
-    this.pizza = [];
-    this.delivery = [];
-  }
+function grandTotal(order, address) {
+  this.order = [];
+  this.address = [];
+}
 
-function Pizza(size, toppings) {
+function Order(pizza, toppings, delivery) {
     this.size = size;
     this.toppings = toppings;
+    this.delivery = delivery;
   }
 
-Pizza.prototype.pizzaOrder = function() {
+  // function Address(street, city, state, zip) {
+  //   this.street = street;
+  //   this.city = city;
+  //   this.state = state;
+  //   this.zip = zip;
+  // }
+
+Order.prototype.pizzaOrder = function() {
   return this.size + ", " + this.toppings + "," + this.delivery;
 }
+
+// Address.prototype.fulladdress = function() {
+//   return this.street + ", " + this.city + ", " + this.state + "," + this.zip;
+// }
 
 //push to this object with conditional for each topping and do one for size as well based on the length of each array that it is for.
 function grandTotal(size, toppings, delivery) {
@@ -38,7 +50,22 @@ function grandTotal(size, toppings, delivery) {
   subtotal = (sizePrice+toppingPrice+deliveryPrice);
   return subtotal;
 }
-// FRONT END //
+
+  function returnGrandTotal() {
+    grandTotal.push(parseFloat(subtotal));
+  }
+
+    function grandOrder() {
+      var toPrice = 0;
+      grandTotal.forEach(function(price){
+        toPrice += price;
+      })
+        return toPrice;
+    }
+
+
+
+//////////////////////// FRONT END ///////////////////////////////
 
 
 //branching
@@ -49,11 +76,10 @@ $(document).ready(function() {
   var delivery = []
     var inOrOut = $("input:radio[name=dining]:checked").val();
     if (inOrOut === "delivery") {
-      var delivery = (this).val();
+      var delivery = $(this).val();
       delivery.push(delivery);
       $("#address").show();
       $("#dining").hide();
-      delviery.push(delivery);
     } else {
       $("#address, #dining").hide();
       $("#orderscreen, footer").show();
@@ -98,10 +124,8 @@ $(document).ready(function() {
     $("#toppings").show()
 
     //price: append DOM #pizzadescription <ul><li></li></ul>
-
   }
 });
-
 
 $("#cheeseCheck").change(function(){
   $("#cheese").toggle();
@@ -122,8 +146,6 @@ $("#anchovyCheck").change(function(){
 $("#mushroomCheck").change(function(){
   $("#mushrooms").toggle();
 });
-
-
 
 // function resetForm() {
 //   $("input#cheese").val("");
