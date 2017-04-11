@@ -74,8 +74,8 @@ $(document).ready(function() {
   var delivery = []
     var inOrOut = $("input:radio[name=dining]:checked").val();
     var delivery = $(this).val();
-    delivery.push(delivery);
     if (inOrOut === "delivery") {
+      delivery.push(delivery);
       $("#address").show();
       $("#dining").hide();
     } else {
@@ -145,7 +145,7 @@ $(document).ready(function() {
     $("#mushrooms").toggle();
   });
 
-  
+// need to write code for add button to subtotal the cost and order.
 
   // function resetForm() {
   //   $("input#cheese").val("");
