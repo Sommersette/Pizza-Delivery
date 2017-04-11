@@ -63,8 +63,6 @@ function grandTotal(size, toppings, delivery) {
         return toPrice;
     }
 
-
-
 //////////////////////// FRONT END ///////////////////////////////
 
 
@@ -75,9 +73,9 @@ $(document).ready(function() {
   event.preventDefault();
   var delivery = []
     var inOrOut = $("input:radio[name=dining]:checked").val();
+    var delivery = $(this).val();
+    delivery.push(delivery);
     if (inOrOut === "delivery") {
-      var delivery = $(this).val();
-      delivery.push(delivery);
       $("#address").show();
       $("#dining").hide();
     } else {
@@ -127,39 +125,41 @@ $(document).ready(function() {
   }
 });
 
-$("#cheeseCheck").change(function(){
-  $("#cheese").toggle();
-});
+  $("#cheeseCheck").change(function(){
+    $("#cheese").toggle();
+  });
 
-$("#pepperoniCheck").change(function(){
-  $("#pepperoni").toggle();
-});
+  $("#pepperoniCheck").change(function(){
+    $("#pepperoni").toggle();
+  });
 
-$("#artichokeCheck").change(function(){
-  $("#artichokes").toggle();
-});
+  $("#artichokeCheck").change(function(){
+    $("#artichokes").toggle();
+  });
 
-$("#anchovyCheck").change(function(){
-  $("#anchovy").toggle();
-});
+  $("#anchovyCheck").change(function(){
+    $("#anchovy").toggle();
+  });
 
-$("#mushroomCheck").change(function(){
-  $("#mushrooms").toggle();
-});
+  $("#mushroomCheck").change(function(){
+    $("#mushrooms").toggle();
+  });
 
-// function resetForm() {
-//   $("input#cheese").val("");
-//   $("input#pepperoni").val("");
-//   $("input#anchovy").val("");
-//   $("input#artichokes").val("");
-//   $("input#size").val("");
-//   $(input"#mushrooms").val("");
-// }
-// resetForm
-//(so  can  add extra  pizzas.)
-// add button clears form/subtotals price and moves item to order description column
-// address added to address box in right column
-// place order shows grand total and order screen.
+  
+
+  // function resetForm() {
+  //   $("input#cheese").val("");
+  //   $("input#pepperoni").val("");
+  //   $("input#anchovy").val("");
+  //   $("input#artichokes").val("");
+  //   $("input#size").val("");
+  //   $(input"#mushrooms").val("");
+  // }
+  // resetForm
+  //(so  can  add extra  pizzas.)
+  // add button clears form/subtotals price and moves item to order description column
+  // address added to address box in right column
+  // place order shows grand total and order screen.
 
 
 });
