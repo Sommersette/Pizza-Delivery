@@ -49,9 +49,10 @@ $(document).ready(function() {
   var delivery = []
     var inOrOut = $("input:radio[name=dining]:checked").val();
     if (inOrOut === "delivery") {
+      var delivery = (this).val();
+      delivery.push(delivery);
       $("#address").show();
       $("#dining").hide();
-      var delivery = (this).val();
       delviery.push(delivery);
     } else {
       $("#address, #dining").hide();
@@ -101,12 +102,6 @@ $(document).ready(function() {
   }
 });
 
-  // var toppings = []
-  // $("input:checkbox[name=toppings]:checked")each(function(){  // loop through  each topping with each statement and accrue cost by pushing to an empty array called toppings.
-  //   var toppings = $(this).val();
-  //   toppings.push(topping);
-  // });
-
 
 $("#cheeseCheck").change(function(){
   $("#cheese").toggle();
@@ -139,11 +134,10 @@ $("#mushroomCheck").change(function(){
 //   $(input"#mushrooms").val("");
 // }
 // resetForm
-
-// toggle toppings and increase  price
+//(so  can  add extra  pizzas.)
 // add button clears form/subtotals price and moves item to order description column
 // address added to address box in right column
-// place order  shows grand total and order screen.
+// place order shows grand total and order screen.
 
 
 });
