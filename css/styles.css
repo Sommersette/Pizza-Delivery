@@ -52,9 +52,6 @@ legend {
   font-size: 18px;
 }
 
-input[type="radio"]{
-  margin: 5px 10px 20px 10px;
-}
 
 .pizza-size, #sizes {
   height: 250px;

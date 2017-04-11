@@ -29,6 +29,8 @@ Pizza.prototype.pizzaOrder = function() {
   return this.size + ", " + this.toppings;
 }
 
+function //push to this object with conditional for each topping and do one for size as  well based on the length of each array that it is for. 
+
 // FRONT END //
 
 //objext manipulation
@@ -84,14 +86,19 @@ $(document).ready(function() {
     $("#large").hide();
     $("#sizes").hide();
     $("#crust").show();
-    $("#toppings").show();
+    $("#toppings").show()
 
     //price: append DOM #pizzadescription <ul><li></li></ul>
 
   }
 });
 
-// ("input:checkbox[value=this]:checked")
+  var toppings = []
+  $("input:checkbox[name=toppings]:checked")each(function(){  // loop through  each topping with each statement and accrue cost by pushing to an empty array called toppings.
+    var toppings = $(this).val();
+    toppings.push(topping);
+  });
+
 
 // var result = function(){
 //   types.forEach(function(type){
@@ -103,15 +110,26 @@ $(document).ready(function() {
 //     });
 //   });
 
-  $("input:checkbox").change(function(event){
-    event.preventDefault();
-    var toppings = []
-    $("#cheese").toggle();
-    $("#pepperoni").toggle();
-    $("#anchovy").toggle();
-    $("#artichokes").toggle();
-    $("#mushrooms").toggle();
-  });
+$("#cheeseCheck").change(function(){
+  $("#cheese").toggle();
+});
+
+$("#pepperoniCheck").change(function(){
+  $("#pepperoni").toggle();
+});
+
+$("#artichokeCheck").change(function(){
+  $("#artichokes").toggle();
+});
+
+$("#anchovyCheck").change(function(){
+  $("#anchovy").toggle();
+});
+
+$("#mushroomCheck").change(function(){
+  $("#mushrooms").toggle();
+});
+
 
 
 // function resetForm() {
