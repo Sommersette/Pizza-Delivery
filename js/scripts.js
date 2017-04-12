@@ -79,6 +79,7 @@
       $("input:checkbox[name=toppings]:checked").each(function() {
         var topping = $(this).val();
         toppings.push(topping);
+        $("#left-panel").hide();
       })
 
       var newOrder= new Order(toppings,size,delivery);
@@ -88,7 +89,7 @@
       $("#subtotal").append(newOrder.pizzaPrice());
 
       $("#placeOrder").click(function() {
-        $("#confirmation").show();
+        $("#confirmation, confirmation-picture").show();
         $("#orderscreen").hide();
         $("#totalprice").text();
         $("#totalprice").text("Thank you for your order. Your total is $" + newOrder.pizzaPrice() + ".");
