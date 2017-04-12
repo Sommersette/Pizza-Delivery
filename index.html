@@ -10,7 +10,7 @@
     <script src="js/scripts.js" charset="utf-8"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="fluid-container">
       <header>
         Turkish's Gothic Fired Pizza
         <!-- <p><span id="login">log in</span></p> -->
@@ -47,9 +47,11 @@
             <input class="delivery-address" required placeholder="street address" type="text" name="street" size="44"><br>
             <input class="delivery-address" required placeholder="city" size="15" type="text" name="location">
             <input class="delivery-address" required placeholder="state" size="5" type="text" name="location" >
-            <input required placeholder="zip code" min="1" size="5" type="number" name="location" value="">
+            <input required placeholder="zip code" min="1" size="5" type="number" name="location">
             <br>
-            <button type="submit" name="button"> Submit</button>
+            <p id="warning">by clicking this button you are agreeing the $3 delivery charge.</p>
+            <input required type="checkbox" name="delivery" value="charge">
+            <button type="submit" name="button"> Submit</button> <br>
           </legend>
         </form>
       </div>
@@ -63,7 +65,7 @@
             <div id="size" class="form-group">
               <legend class="radio-inline">Size: $10+ </legend>
               <label for="radio-inline  ">
-              <input class="size" type="radio" name="size" value="small">small
+              <input required class="size" type="radio" name="size" value="small">small
               <input class="size" type="radio" name="size" value="medium">Medium +$2
               <input class="size" type="radio" name="size" value="large">LARGE +$4<br>
               <img id="sizes" src="img/pizza-size.jpg" alt="line drawing of pizza">
@@ -73,9 +75,9 @@
             </div>
             <!-- toppings -->
             <div id="toppings" class="form-group">
-              <legend>Toppings: $1.25 each</legend>
+              <legend>Toppings: $1.00 each</legend>
               <label for="cheese">
-                <input id="cheeseCheck" class="toppings" required type="checkbox" name="toppings" value="cheese" > Cheese
+                <input required id="cheeseCheck" class="toppings" required type="checkbox" name="toppings" value="cheese" > Cheese
               </label><br>
               <label for="artichoke">
                 <input id="artichokeCheck" class="toppings" type="checkbox" name="toppings" value="artichoke"> Artichokes
@@ -108,23 +110,18 @@
         <div class="col-sm-2">
           <div class="col-sm-12">
             <div id="deliveryaddress">
-              <h4>Delivery Address: </h4> <br>
-              <p id="delivery-address"></p> <!-- fill in with js/JQuery -->
             </div>
           </div>
           <div class="col-sm-12">
             <div id="pizzadescription">
-              <h4>Order Description: </h4> <br>
+              <h4>Order Description: </h4> <hr>
               <ul>
                 <li></li>
               </ul> <!-- fill in with js -->
             </div>
           </div>
-          <div class="col-sm-12">
-            <div id="subtotal">
-              <h4>Subtotal:</h4> <br>
-              <p id="red"></p> <!-- fill in with js -->
-            </div>
+          <div id="subtotal" class="col-sm-12">
+              <h4>Subtotal: $</h4> <hr>
           </div>
           <br>
           <button id="placeOrder" class="btn btn-lg btn-danger btn-block" name="button"> Place Order </button>
@@ -132,28 +129,10 @@
       </div>
       <!-- Order confirmation -->
       <div id="confirmation" class="col-sm-12">
-        <div class="col-sm-6">
-          <h1>TOTAL:</h1>
-          <div id="totalprice">
-          </div>
-        </div>
-        <div class=col-sm-6"">
-          <h1>Yummers!</h1> <br>
-          <span></span> <!-- pizza  on it's way -->
+        <div id="totalprice">
+          <br>
+          <br>
         </div>
       </div>
-    </div>
-    <br>
-    <footer id="footer">
-      <div class="col-sm-4">
-        <p>address: 6124 W Burnside dr, Porland, OR 97219-6348</p>
-      </div>
-      <div class="col-sm-4">
-        <p>Email:orders@turksgothicpizza.com</p>
-      </div>
-      <div class="col-sm-4">
-        <p>phone # 503-555-6870</p>
-      </div>
-    </footer>
   </body>
 </html>

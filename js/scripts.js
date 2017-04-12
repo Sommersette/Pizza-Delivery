@@ -1,61 +1,47 @@
-// BACKEND //
-  // function grandTotal(order, address) {
-  //   this.order = [];
-  //   this.address = [];
-  // }
+////////////////////////// BACKEND /////////////////////////////
+
 
   function Order(toppings, size, delivery) {
       this.toppings = toppings;
       this.size = size;
       this.delivery = delivery;
     }
-  // function Address(street, city, state, zip) {
-  //   this.street = street;
-  //   this.city = city;
-  //   this.state = state;
-  //   this.zip = zip;
-  // }
+
   Order.prototype.pizzaPrice = function(toppings, size, delivery) {
     var priceSize = 0;
     if (this.size === "small") {
-      priceSize += 1.00
+      priceSize += 10.00
     } else if (this.size === "medium"){
-      priceSize += 120.00
+      priceSize += 12.00
     } else {
-      priceSize += 4000.00
+      priceSize += 14.00
     }
+
     var priceToppings = 0;
     if (this.toppings.length === 1) {
-      priceToppings += 1.25
+      priceToppings += 1.00
     } else if (this.toppings.length === 2) {
-      priceToppings += 2.50
+      priceToppings += 2.00
     } else if (this.toppings.length === 3) {
-      priceToppings += 3.75
+      priceToppings += 3.00
     } else if (this.toppings.length === 4) {
-      priceToppings += 5.00
+      priceToppings += 4.00
     } else {
-      priceToppings += 6.25
+      priceToppings += 5.00
     }
 
     var priceDelivery = 0;
-
-    if (this.delivery) {
+    if ($("input:checkbox[name=delivery]:checked").val()) {
       priceDelivery += 3;
-    } else {
+    } else if (this.delivery){
       priceDelivery +=0;
     }
+
 
 
     return priceSize + priceToppings + priceDelivery;
   }
 
-  // Address.prototype.deliveryPrice = function() {
-  //   if (delivery === true) {
-  //     this.order += 2.50
-  //   } else {
-  //    this.order += 0.00
-  //   }
-  // }
 ////////////////////////// FRONT END /////////////////////////////
 
   $(document).ready(function() {
@@ -94,6 +80,7 @@
         var topping = $(this).val();
         toppings.push(topping);
       })
+
       var newOrder= new Order(toppings,size,delivery);
       toppings.forEach(function(topping) {
       $("#pizzadescription").append("<li>" + topping + "</li>");
@@ -102,8 +89,9 @@
 
       $("#placeOrder").click(function() {
         $("#confirmation").show();
-        $("#totalprice").text("why");
-        $("#totalprice").text("thank you for your order. The total price is" + newOrder.pizzaPrice());
+        $("#orderscreen").hide();
+        $("#totalprice").text();
+        $("#totalprice").text("Thank you for your order. Your total is $" + newOrder.pizzaPrice() + ".");
       })
     });
 
@@ -111,7 +99,7 @@
     $("#size").change(function(event){
     event.preventDefault();
     var Size = []
-    var size =  $("input:radio[name=size]:checked").val();
+    var size = $("input:radio[name=size]:checked").val();
     if (size === "large") {
       $("#small").hide();
       $("#medium").hide();
@@ -119,7 +107,7 @@
       $("#sizes").hide();
       $("#crust").show();
       $("#toppings").show();
-      //price: append DOM #pizzadescription <ul><li></li></ul>
+
     } else if (size === "medium") {
       $("#small").hide();
       $("#medium").show();
@@ -128,7 +116,6 @@
       $("#crust").show();
       $("#toppings").show();
 
-      //price: append DOM #pizzadescription <ul><li></li></ul>
     } else {
       $("#small").show();
       $("#medium").hide();
@@ -136,8 +123,6 @@
       $("#sizes").hide();
       $("#crust").show();
       $("#toppings").show()
-
-      //price: append DOM #pizzadescription <ul><li></li></ul>
     }
   });
 
@@ -161,19 +146,4 @@
       $("#mushrooms").toggle();
     });
 
-  // need to write code for add button to subtotal the cost and order.
 });
-
-    // function resetForm() {
-    //   $("input#cheese").val("");
-    //   $("input#pepperoni").val("");
-    //   $("input#anchovy").val("");
-    //   $("input#artichokes").val("");
-    //   $("input#size").val("");
-    //   $(input"#mushrooms").val("");
-    // }
-    // resetForm
-    //(so  can  add extra  pizzas.)
-    // add button clears form/subtotals price and moves item to order description column
-    // address added to address box in right column
-    // place order shows grand total and order screen.

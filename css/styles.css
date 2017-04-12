@@ -24,6 +24,22 @@ body, #login{
   font-family: SFGothican;
 }
 
+#subtotal, #pizzadescription {
+  font-size: 20px;
+}
+
+#warning {
+  font-weight: bold;
+}
+
+#totalprice {
+  font-size: 30px;
+  font-style: oblique;
+  font-weight: bolder;
+  color: red;
+  text-align: center;
+}
+
 .jumbotron {
   text-align: center;
   display: inline-block;
@@ -39,7 +55,7 @@ legend {
   text-align:  center;
 }
 
-#orderscreen, #confirmation, #address, .pizza-size, #toppings, #crust, #pepperoni, #anchovy, #artichokes, #mushrooms, #cheese, #footer {
+#orderscreen, #confirmation, #address, .pizza-size, #toppings, #crust, #pepperoni, #anchovy, #artichokes, #mushrooms, #cheese {
   display: none;
 }
 
@@ -102,12 +118,12 @@ li {
   height: 20vh;
 }
 
-#red {
+/*#red {
   color: red;
   font-style: oblique;
   font-weight: bolder;
   font-size: 22px;
-}
+}*/
 
 li {
   list-style-type: none;
