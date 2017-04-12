@@ -89,7 +89,7 @@
       $("#subtotal").append(newOrder.pizzaPrice());
 
       $("#placeOrder").click(function() {
-        $("#confirmation, confirmation-picture").show();
+        $("#confirmation").show();
         $("#orderscreen").hide();
         $("#totalprice").text();
         $("#totalprice").text("Thank you for your order. Your total is $" + newOrder.pizzaPrice() + ".");

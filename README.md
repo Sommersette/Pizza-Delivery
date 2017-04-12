@@ -9,28 +9,32 @@
 _This web application is a self contained website that relies upon use input to mock up a pizza order and delivery. It is comrised of several fields that contain form elements, input selectors, and basic  graphic stylings that are controlled by a local JavaScript back end and minimal UI. When items are selected it will add them to the screen as if making the pizza in front of you. Also the addess after it is input will be saved to  an address box for delivery conformation._
 
 ## Specs
-* Sketch wireframe layout
-  * input:
-  * output:
-* write html for wireframe
-  * input: html elements
-  * output:form elements and inputs display on screen
-  * branching for take away or delivery
-    * input: radio/image click
-    * output: alery notification confirming choice. 
-    * set up fields for required input for address.
-      * input: required assigned to inputs
-      * output: required appears on form and input element if
-    * select size  of  pizza
-      * input: radio button input
-      * output: display size selected on the screen.
-      submit is clicked/enter pressed
-      * Topping check boxes added
-        * input: input type checkbox
-        * output: checkbox on the screen assigned to Topping
-      * Cost subtotal calculation
-        * input: user  input from size, toppings, and delivery aggregated  with javascript
-        * output: DOM maniputation on the screen with cost  appearing in box.
+* Welcome Screen
+  *input: web address
+  *output: Take away and delivery option presented.
+* Set up branching so customer can choose take out or delivery
+    *input: Click radio button for delivery.
+    *output: Goes to address form.
+    *input: Click on radio button for take away
+    *output: Order form appears.
+* Address form branch to order form
+    *input: Click button
+    *output: Form hides element and shows order form
+* Order form input fields for size
+    *input: Customer clicks small pizza size.
+    *output: Size measurement image appears underneath. Pizza crust appears in pan in center of screen. Also topping selections appear in column below size options.
+* Order form input fields for toppings
+    *input: Cheese toppings checkbox checked
+    *output: Image of cheese appears on top of crust and same for other toppings as well.
+* Order selection is completed
+    *input: Customer clicks add button
+    *output: Order sidebar disappears from left side. Right side itemized order appears in order Description section and subtotal appears below that in the subtotal description.
+* Place order
+  *input: Place order button is clicked to confirm order
+  *ouput: Order form is hidden and thank you screen with total appears and wood fire pizza oven on it.
+
+
+
 
 
 ## Setup/Installation Requirements
