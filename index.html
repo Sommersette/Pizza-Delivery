@@ -15,14 +15,14 @@
         Turkish's Gothic Fired Pizza
         <!-- <p><span id="login">log in</span></p> -->
       </header>
-      <!-- first branch - delivery or  take away -->
-      <form  id="dining" class="form-group col-sm-12 jumbotron">
+      <!-- first branch - delivery or take away -->
+      <div  id="dining" class="form-group col-sm-12 jumbotron">
         <!-- take away -->
         <div class="col-sm-6">
           <div>
             <h1>Take Away</h1>
             <label for="takeaway">
-              <input id="takeaway" type="radio" name="dining" value="takeaway">
+              <input class="dining" id="takeaway" type="radio" name="dining" value="takeaway">
               <img src="img/takeaway-small.jpg" alt="door for restaurant">
             </label>
           </div>
@@ -32,24 +32,24 @@
           <div >
             <h1>Delivery</h1>
             <label for="delivery"> 30 minutes or less or your pizza will be stone cold <br>
-              <input id="delivery" type="radio" name="dining" value="delivery">
+              <input class="dining" id="delivery" type="radio" name="dining" value="delivery">
               <img src="img/delivery.jpg" alt="delivery car">
             </label>
           </div>
         </div>
-      </form >
+      </div >
         <br>
       <!-- 2nd branch (if) take away address -->
       <div id="address">
-        <form class="" action="index.html" method="post">
+        <form id="delivery-address">
           <legend>Address <br>
-            <input required placeholder="Full Name" size="44" type="text" name="fullname"> <br>
-            <input required placeholder="street address" type="text" name="street" size="44"><br>
-            <input required placeholder="city" size="15" type="text" name="location">
-            <input required placeholder="state" size="5" type="text" name="location" >
+            <input id="fullName" class="delivery-address" required placeholder="Full Name" size="44" type="text" name="fullname"> <br>
+            <input class="delivery-address" required placeholder="street address" type="text" name="street" size="44"><br>
+            <input class="delivery-address" required placeholder="city" size="15" type="text" name="location">
+            <input class="delivery-address" required placeholder="state" size="5" type="text" name="location" >
             <input required placeholder="zip code" min="1" size="5" type="number" name="location" value="">
             <br>
-            <button id="continue-to-order" class="btn btn-lx btn-success" type="submit" name="button"><i class="fa fa-car" aria-hidden="true"></i> Submit</button>
+            <button type="submit" name="button"> Submit</button>
           </legend>
         </form>
       </div>
@@ -63,9 +63,9 @@
             <div id="size" class="form-group">
               <legend class="radio-inline">Size: $10+ </legend>
               <label for="radio-inline  ">
-              <input type="radio" name="size" value="small">small
-              <input type="radio" name="size" value="medium">Medium +$2
-              <input type="radio" name="size" value="large">LARGE +$4<br>
+              <input class="size" type="radio" name="size" value="small">small
+              <input class="size" type="radio" name="size" value="medium">Medium +$2
+              <input class="size" type="radio" name="size" value="large">LARGE +$4<br>
               <img id="sizes" src="img/pizza-size.jpg" alt="line drawing of pizza">
               <img id="small" class="pizza-size" src="img/small-size.jpg" alt="small pizza 10 inch pizza">
               <img id="medium" class="pizza-size" src="img/medium-size.jpg" alt="medium 14 inch pizza">
@@ -75,7 +75,7 @@
             <div id="toppings" class="form-group">
               <legend>Toppings: $1.25 each</legend>
               <label for="cheese">
-                <input id="cheeseCheck" class="toppings" type="checkbox" name="toppings" value="cheese" > Cheese
+                <input id="cheeseCheck" class="toppings" required type="checkbox" name="toppings" value="cheese" > Cheese
               </label><br>
               <label for="artichoke">
                 <input id="artichokeCheck" class="toppings" type="checkbox" name="toppings" value="artichoke"> Artichokes
@@ -90,7 +90,8 @@
                 <input id="anchovyCheck" class="toppings" type="checkbox" name="toppings" value="anchovy"> Anchovies
               </label>  <br>
             </div>
-            <button id="add" class="btn btn-info btn-block btn-lg" type="submit" name="button"><i class="fa fa-plus" aria-hidden="true"></i>  Add</button>
+            <button id="add" type="button" name="button">Add</button>
+            <!-- <button id="add" class="btn btn-info btn-block btn-lg" name="button"><i class="fa fa-plus" aria-hidden="true"></i>  Add toppings</button> -->
           </form>
         </div>
         <!-- visual css stylings pizza builder -->
@@ -108,7 +109,7 @@
           <div class="col-sm-12">
             <div id="deliveryaddress">
               <h4>Delivery Address: </h4> <br>
-              <p id="bluetext"></p> <!-- fill in with js/JQuery -->
+              <p id="delivery-address"></p> <!-- fill in with js/JQuery -->
             </div>
           </div>
           <div class="col-sm-12">
@@ -126,14 +127,14 @@
             </div>
           </div>
           <br>
-          <button class="btn btn-lg btn-danger btn-block" type="submit" name="button"> Place Order <i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+          <button id="placeOrder" class="btn btn-lg btn-danger btn-block" name="button"> Place Order </button>
         </div>
       </div>
       <!-- Order confirmation -->
       <div id="confirmation" class="col-sm-12">
         <div class="col-sm-6">
+          <h1>TOTAL:</h1>
           <div id="totalprice">
-            <h1>TOTAL:</h1>
           </div>
         </div>
         <div class=col-sm-6"">

@@ -102,15 +102,15 @@ li {
   height: 20vh;
 }
 
-#bluetext {
-  color: blue;
-}
-
 #red {
   color: red;
   font-style: oblique;
   font-weight: bolder;
   font-size: 22px;
+}
+
+li {
+  list-style-type: none;
 }
 
 #pizzadescription {
